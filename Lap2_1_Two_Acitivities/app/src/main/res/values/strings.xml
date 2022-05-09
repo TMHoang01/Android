@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lap2_1_Two_Acitivities</string>
+    <string name="btn_send">SEND</string>
+    <string name="txt_header">Message Receiived</string>
+    <string name="txtSend">Enter Your Message Here</string>
+    <string name="btn_reply">Reply</string>
+    <string name="txt_Reply">Enter Your Reply Here</string>
+    <string name="text_header_reply">Reply Received</string>
+    <string name="txtReply" />
+    <string name="textSend" />
+    <string name="textReply" />
+</resources>
