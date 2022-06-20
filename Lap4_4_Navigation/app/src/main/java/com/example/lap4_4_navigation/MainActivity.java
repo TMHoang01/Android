@@ -15,6 +15,7 @@ import android.view.MenuItem;
 
 import com.example.lap4_4_navigation.fragment.HistoryFragment;
 import com.example.lap4_4_navigation.fragment.HomeFragment;
+import com.example.lap4_4_navigation.fragment.MyProfileFragment;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private  static final int FRAGMENT_HOME = 0;
     private  static final int FRAGMENT_HISTORY = 1;
+    private  static final int FRAGMENT_MY_PROFILE = 2;
     private  static final int FRAGMENT_LOGOUT = 3;
 
     private int mCurrentFrament = FRAGMENT_HISTORY;
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         replaceFragment(new HomeFragment());
         navigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
+        mCurrentFrament = FRAGMENT_HOME;
 
     }
 
@@ -67,6 +70,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if(mCurrentFrament != FRAGMENT_LOGOUT){
                 replaceFragment(new HomeFragment());
                 mCurrentFrament = FRAGMENT_LOGOUT;
+            }
+        }else if(id == R.id.nav_profile){
+            if(mCurrentFrament != FRAGMENT_MY_PROFILE){
+                replaceFragment(new MyProfileFragment());
+                mCurrentFrament = FRAGMENT_MY_PROFILE;
             }
         }
 
